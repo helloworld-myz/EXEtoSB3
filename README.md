@@ -1,4 +1,4 @@
-# EXEtoSB3 v1.0.0  
+# EXEtoSB3
 **将TurboWarp打包的EXE文件转换为Scratch 3.0项目（SB3格式）的工具**  
 
 
