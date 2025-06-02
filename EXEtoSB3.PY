@@ -17,7 +17,6 @@
 #        5. 增强文件选择控件
 
 import os
-import sys
 import wx
 import wx.adv
 import threading
