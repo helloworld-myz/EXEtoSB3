@@ -37,9 +37,6 @@ class EXEtoSB3Converter(wx.Frame):
         self.init_ui()
         self.create_menu()
         self.log("=== 程序初始化完成 ===")
-
-    def has_subfolders(self, directory):
-        return any(os.path.isdir(os.path.join(directory, name)) for name in os.listdir(directory))
         
     def init_ui(self):
         panel = wx.Panel(self)
@@ -197,8 +194,6 @@ class EXEtoSB3Converter(wx.Frame):
         
         # 查找资源目录 (步骤2/3)
         wx.CallAfter(self.progress_dialog.Update, 50, "正在查找资源...")
-        if self.has_subfolders(temp_dir):
-            raise ValueError("资源目录下存在子目录，请将其合并到根目录")
         app_dir = join(temp_dir, "resources", "app")
         if not exists(app_dir):
             raise ValueError(f"未找到资源目录: {app_dir}")
